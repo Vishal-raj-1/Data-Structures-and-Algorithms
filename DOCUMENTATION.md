@@ -8,6 +8,7 @@
 5. [Tries](./DS%20implementations/TRIES/)
 6. [Segment Trees](./DS%20implementations/FENWICK%20TREES/)
 7. [Fenwick Trees](./DS%20implementations/FENWICK%20TREES)
+8. [Linked List](./DS%20implementations/Linked%20List)
 
 ### Important Algorithms
 
