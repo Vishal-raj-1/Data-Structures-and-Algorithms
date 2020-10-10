@@ -47,6 +47,32 @@ void insertAtNthNode(int x, int n)
     temp1->next = temp;
 }
 
+//Fxn to delete N'th Node
+void Delete(int n)
+{
+    Node* temp1 = head;
+
+    if(n == 1)
+    {
+        //Head node is deleted and
+        //Now head is pointed to next element
+        head = temp1 -> next;
+        free(temp1);
+        return ;
+    }
+    
+    for(int i=0;i<n-2;i++)
+      temp1 = temp1 -> next;
+    
+    //Pointer who point to N'th node
+    Node* temp2 = temp1 -> next;
+    
+    temp1 -> next = temp2 -> next;
+    
+    //delete N'th node
+    free(temp2);
+}
+
 void PrintList()
 {
     //Initialize to Head Node
@@ -72,7 +98,8 @@ int main()
         cout << "\n"
              << "Enter 1 for insertion\n"
              << "2 for Priniting List\n"
-             << "3 for Quit|\n";
+             << "3 for Delete a node"
+             << "4 for Quit\n";
         cin >> op;
 
         if (op == 1)
@@ -83,6 +110,12 @@ int main()
         }
         else if (op == 2)
             PrintList();
+        else if(op == 3)
+        {
+            cout << "Enter the position of Node : ";
+            cin >> n;
+            Delete(n);
+        }
         else
             break;
     }
