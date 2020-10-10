@@ -4,15 +4,13 @@
 #include <iostream>
 using namespace std;
 
-//typedef so we can simply use Node instead of struct Node
-typedef struct Node
+struct Node
 {
     //To store the element
     int data;
     //To store the address of next element
-    struct Node *next;
-
-} Node;
+    Node *next;
+};
 
 //Pointer to head Node initialize to NULL
 Node *head = NULL;
